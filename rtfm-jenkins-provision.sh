@@ -10,7 +10,7 @@ JENKINS_ANSIBLE_PLAYBOOK="jenkins-provision.yml"
 
 JENKINS_EBS_ID="vol-0085149b3a0a45d0c"
 
-HELP="\n\tCreate and provision Jenkins stack script.\n\n\t-b: backup Jenkins EBS to S3\n\t-c: run Stack create (use -s for Stack name!)\n\t-u: run Stack updatei (use -s for Stack name!)\n\t-a: run Ansible playbook\n\t-i: Allowed IP\n\t-s: Stack name\n\t-h: print this Help\n"
+HELP="\n\tCreate and provision Jenkins stack script.\n\n\t-b: backup Jenkins EBS to S3\n\t-c: run Stack create (use -s for Stack name!)\n\t-u: run Stack update (use -s for Stack name!)\n\t-a: run Ansible playbook\n\t-i: Allowed IP\n\t-s: Stack name\n\t-h: print this Help\n"
 
 backup_ebs=
 create_stack=
@@ -23,7 +23,7 @@ while getopts "bcuai:s:h" opt; do
 	case $opt in
         b)  
             backup_ebs=1
-            echo "Creating stack"
+            echo "Backing up EBS"
             ;; 
 		c) 
 			create_stack=1

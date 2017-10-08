@@ -1,0 +1,8 @@
+- hosts: jenkins
+  become:
+    true
+  roles:
+   - mongrelion.docker
+   - franklinkim.docker-compose
+   - rtfm-jenkins
+

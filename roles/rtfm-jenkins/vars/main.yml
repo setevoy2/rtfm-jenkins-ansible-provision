@@ -1,0 +1,2 @@
+ebs_volume: "/dev/xvdb1"
+jenkins_mount_path: "/jenkins/"

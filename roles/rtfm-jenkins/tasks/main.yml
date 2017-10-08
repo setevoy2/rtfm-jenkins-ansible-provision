@@ -1,0 +1,25 @@
+- name: Create  "{{ jenkins_mount_path }}" directory
+  file: 
+    path: /jenkins
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
+- name: Mount EBS "{{ ebs_volume }}"
+  mount:
+    path: "{{ jenkins_mount_path }}"
+    src: "{{ ebs_volume }}"
+    state: mounted
+    fstype: ext4
+
+- template:
+    src: templates/docker-compose.yml.j2
+    dest: /home/admin/docker-compose.yml
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Start Jenkins service
+  docker_service:
+    project_src: /home/admin

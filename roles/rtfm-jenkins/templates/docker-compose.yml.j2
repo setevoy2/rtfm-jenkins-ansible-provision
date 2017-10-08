@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    jenkins:
+      user: root
+      image: jenkins
+      ports:
+        - '80:8080'
+      volumes:
+        - {{ jenkins_mount_path }}:/var/jenkins_home
+        - /var/run/docker.sock:/var/run/docker.sock
+      environment:
+        - JENKINS_HOME=/var/jenkins_home

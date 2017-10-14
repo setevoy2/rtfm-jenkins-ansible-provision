@@ -3,6 +3,7 @@
     true
   roles:
    - mongrelion.docker
+   - common
    - franklinkim.docker-compose
    - rtfm-jenkins
 

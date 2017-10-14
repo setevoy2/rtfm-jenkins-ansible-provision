@@ -3,7 +3,7 @@
 RSA_LOCAL_PATH="/home/setevoy/Work/RTFM/Bitbucket/aws-credentials/rtfm-jenkins.pem"
 
 JENKINS_STACK_WORKDIR="/home/setevoy/Work/RTFM/Github/rtfm-blog-cf-templates"
-JENKINS_STACK_TEMPLATE="rtfm_jenkins_stack.json"
+JENKINS_STACK_TEMPLATE="rtfm-jenkins-stack.json"
 
 JENKINS_ANSIBLE_WORKDIR="/home/setevoy/Work/RTFM/Github/rtfm-jenkins-ansible-provision/"
 JENKINS_ANSIBLE_PLAYBOOK="jenkins-provision.yml"

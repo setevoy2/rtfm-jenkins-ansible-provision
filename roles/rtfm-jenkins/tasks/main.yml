@@ -13,7 +13,8 @@
     state: mounted
     fstype: ext4
 
-- template:
+- name: Copy Docker Compose file
+  template:
     src: templates/docker-compose.yml.j2
     dest: /home/admin/docker-compose.yml
     owner: root

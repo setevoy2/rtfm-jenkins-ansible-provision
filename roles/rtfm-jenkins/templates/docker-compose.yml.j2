@@ -10,6 +10,6 @@ services:
         - {{ jenkins_mount_path }}:/var/jenkins_home
         - /var/run/docker.sock:/var/run/docker.sock
         - /usr/bin/docker:/usr/bin/docker
-        - - /usr/lib/x86_64-linux-gnu/libltdl.so.7:/usr/lib/x86_64-linux-gnu/libltdl.so.7
+        - /usr/lib/x86_64-linux-gnu/libltdl.so.7:/usr/lib/x86_64-linux-gnu/libltdl.so.7
       environment:
         - JENKINS_HOME=/var/jenkins_home

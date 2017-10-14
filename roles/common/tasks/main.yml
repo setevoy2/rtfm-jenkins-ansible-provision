@@ -1,0 +1,5 @@
+- name: Add admin user to docker group
+  user:
+    name: admin
+    groups: docker
+    append: yes

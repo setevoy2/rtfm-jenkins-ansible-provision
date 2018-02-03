@@ -4,6 +4,7 @@ services:
     jenkins:
       user: root
       image: jenkins
+      restart: unless-stopped
       ports:
         - '80:8080'
       volumes:
